@@ -58,6 +58,7 @@ public abstract class AnnotationBeanUtils {
 	 * @param excludedProperties the names of excluded properties, if any
 	 * @see org.springframework.beans.BeanWrapper
 	 */
+	//复制注解的属性到指定的Bean中
 	public static void copyPropertiesToBean(Annotation ann, Object bean, StringValueResolver valueResolver, String... excludedProperties) {
 		Set<String> excluded =  new HashSet<String>(Arrays.asList(excludedProperties));
 		Method[] annotationProperties = ann.annotationType().getDeclaredMethods();
